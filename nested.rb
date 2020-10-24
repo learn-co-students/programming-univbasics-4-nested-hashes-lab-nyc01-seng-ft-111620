@@ -1,6 +1,6 @@
 
 def hopper
-	programmer_hash = 
+	programmer_hash =
  		{
       :grace_hopper => {
         :known_for => "COBOL",
@@ -16,12 +16,13 @@ def hopper
       }
     }
 
+programmer_hash[:grace_hopper]
 end
 
 def alan_kay_is_known_for
 	# What combination of keys would you use to return the value of the :known_for key of :alan_kay?
-	
-	programmer_hash = 
+
+	programmer_hash =
  		{
       :grace_hopper => {
         :known_for => "COBOL",
@@ -37,10 +38,11 @@ def alan_kay_is_known_for
       }
     }
 
+programmer_hash[:alan_kay][:known_for]
 end
 
 def dennis_ritchies_language
-	programmer_hash = 
+	programmer_hash =
  		{
       :grace_hopper => {
         :known_for => "COBOL",
@@ -52,10 +54,11 @@ def dennis_ritchies_language
       },
       :dennis_ritchie => {
         :known_for => "Unix",
-        :languages => ["C"]
+        :languages => "C"
       }
     }
 
+programmer_hash[:dennis_ritchie][:languages]
 end
 
 def adding_matz
@@ -66,8 +69,12 @@ def adding_matz
 # }
 # return the entire updated hash
 
-	programmer_hash = 
+	programmer_hash =
  		{
+			:yukihiro_matsumoto => {
+				:known_for => "Ruby",
+				:languages => ["LISP", "C"]
+			},
       :grace_hopper => {
         :known_for => "COBOL",
         :languages => ["COBOL", "FORTRAN"]
@@ -82,13 +89,14 @@ def adding_matz
       }
     }
 
+programmer_hash
 end
 
 def changing_alan
-  # change what Alan Kay is :known_for to the value of the alans_new_info variable. 
+  # change what Alan Kay is :known_for to the value of the alans_new_info variable.
   # return the entire updated hash
 
-	programmer_hash = 
+	programmer_hash =
  		{
       :grace_hopper => {
         :known_for => "COBOL",
@@ -103,14 +111,15 @@ def changing_alan
         :languages => ["C"]
       }
     }
-
+programmer_hash[:alan_kay][:known_for] = "GUI"
+programmer_hash
 end
 
 def adding_to_dennis
   # add "Assembly" to Dennis Ritchie's languages array
   # return the entire updated hash
 
-	programmer_hash = 
+	programmer_hash =
  		{
       :grace_hopper => {
         :known_for => "COBOL",
@@ -122,7 +131,7 @@ def adding_to_dennis
       },
       :dennis_ritchie => {
         :known_for => "Unix",
-        :languages => ["C"]
+        :languages => ["C", "Assembly"]
       }
     }
 
